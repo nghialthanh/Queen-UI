@@ -21,7 +21,7 @@ export function deepEqual(object1, object2) {
     return true;
 }
 // ------------------------- check Object ------------------------//
-function isObject(object) {
+export function isObject(object) {
     return object != null && typeof object === "object";
 }
 //-------------------------- cover unicode remove accented letters //
@@ -45,6 +45,18 @@ export const optionQSelect = (data, keyValue, keyLabel) => {
         };
     });
     return lst;
+};
+
+//------------------------ instead of if else ---------------//
+// const expr = 'Papayas';
+// const matched = match(expr, {
+//     Oranges: 'Oranges are $0.59 a pound.',
+//     Mangoes: 'Mangoes and papayas are $2.79 a pound.',
+//     Papayas: 'Mangoes and papayas are $2.79 a pound.',
+//     default: `Sorry, we are out of ${expr}.`,
+//   });
+export const QCondition = (expression, cases) => {
+    return cases[expression] || cases?.default;
 };
 
 //------------------------ add className for component -------------//

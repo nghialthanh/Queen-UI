@@ -25,6 +25,16 @@ function QSelect(props) {
     const inputRef = useRef();
     useOutside(wrapperRef, _focus, _setFocus);
 
+    const checkIfMode = (e) => {
+        if (
+            props.mode === "multiple" &&
+            Array.isArray(props.value) &&
+            props.value?.some((ele) => ele.value === e.value)
+        )
+            return true;
+        return false;
+    };
+
     const handleChangeInput = (e) => {
         let arr = props.data.filter(
             (ele) =>
@@ -38,10 +48,7 @@ function QSelect(props) {
 
     const handlePickItem = (e) => {
         if (props.mode === "multiple") {
-            if (
-                Array.isArray(props.value) &&
-                props.value?.some((ele) => ele.value === e.value)
-            ) {
+            if (checkIfMode(e)) {
                 props.onChange(
                     props.value?.filter((ele) => ele.value !== e.value)
                 );
@@ -59,15 +66,25 @@ function QSelect(props) {
         if (_value) _setValue("");
     }, [_focus]);
 
+    const renderClassNameItem = (e) => {
+        if (props.mode === "multiple") {
+            return classNames("__qselect_popup_list_item", {
+                __qselect_popup_list_active_item:
+                    Array.isArray(props.value) &&
+                    props.value?.some((ele) => ele.value === e.value),
+            });
+        } else
+            return classNames("__qselect_popup_list_item", {
+                __qselect_popup_list_active_item:
+                    e.value === props.value?.value,
+            });
+    };
     const renderItem = () => {
         const list = _value ? _data : props.data;
         return list.map((element) => {
             return (
                 <div
-                    className={classNames("__qselect_popup_list_item", {
-                        __qselect_popup_list_active_item:
-                            element.value === props.value?.value,
-                    })}
+                    className={renderClassNameItem(element)}
                     key={element.value}
                     onClick={() => {
                         handlePickItem(element);
@@ -75,7 +92,8 @@ function QSelect(props) {
                     }}
                 >
                     <span>{element.label}</span>
-                    {element.value === props.value?.value && (
+                    {(checkIfMode(element) ||
+                        element.value === props.value?.value) && (
                         <ICON_CHECK className="__qselect_popup_list_active_icon" />
                     )}
                 </div>

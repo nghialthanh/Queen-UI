@@ -75,7 +75,7 @@
                 border-radius: 5px;
                 padding: 0.5rem;
                 font-size: 0.9rem;
-                color: var(--font-color);
+                color: var(--color-contrast);
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -110,6 +110,7 @@
                 position: relative;
                 padding: 0 0.75rem;
                 margin-right: 0.3rem;
+                margin-bottom: 0.3rem;
                 font-size: 0.875rem;
                 color: var(--font-color);
                 border-radius: 5px;

@@ -4,8 +4,12 @@
     font-size: 0.9rem;
     padding: 0 1.5rem;
     color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     &_title {
         @include typingCursor(var(--font-color));
+        line-height: initial;
     }
     &_input {
         position: absolute;
@@ -25,8 +29,9 @@
     &_checkmark {
         display: block;
         position: absolute;
-        top: 0.175rem;
+        top: 50%;
         left: 0;
+        transform: translate(0, -50%);
         height: 1rem;
         width: 1rem;
         background-color: #eee;
@@ -36,15 +41,19 @@
             transform: scale(0.5);
             opacity: 1;
             transition: all 0.5s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+            height: 1rem;
+            width: 1rem;
         }
     }
-    &_checkmark[circle="true"] {
+    &_checkmark[circle="circle"] {
         &::after {
             content: "\26AC";
             position: absolute;
             display: none;
             left: 50%;
-            top: 50%;
+            top: calc(calc(100% - 0.9rem) / 2);
+            height: 0.75rem;
+            width: 0.75rem;
             transform: translate(-50%, -50%);
             color: var(--white);
             font-size: 1.5rem;
