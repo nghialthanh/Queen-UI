@@ -1,0 +1,14 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./function.scss";
+@import "./animation.scss";
+@import "./systems.scss";
+
+//--------------------- Component default -------------------//
+@import "../components/Button/Button.scss";
+@import "../components/Input/Input.scss";
+@import "../components/Loading/Loading.scss";
+@import "../components/Radio/Radio.scss";
+@import "../components/Select/Select.scss";
+@import "../components/Checkbox/Checkbox.scss";

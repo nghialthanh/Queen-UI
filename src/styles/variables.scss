@@ -1,0 +1,55 @@
+//-------------------------ver 2 -------------------//
+:root {
+    --white: white;
+    --font-color: #676767;
+    --border: #dee2e6;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9rem;
+}
+
+.__qsetting_all {
+    --border-radius-ele: 8px;
+    --padding-ele: 0.5rem;
+    --color-contrast: #676767;
+}
+
+//themes
+.__qorange {
+    --primary: #ff7262;
+    --primary-2: #ff9800;
+    --primary-shadow: 255, 152, 0;
+    --primary-hover: #ffdbac;
+}
+.__qpurple {
+    --primary: #d500f9;
+    --primary-2: #9c27b0;
+    --primary-shadow: 156, 39, 176;
+    --primary-hover: #f9d4ff;
+}
+.__qgreen {
+    --primary: #0bf182;
+    --primary-2: #5ec163;
+    --primary-shadow: 76, 175, 80;
+    --primary-hover: #bcffde;
+}
+.__qred {
+    --primary: #f44336;
+    --primary-2: #e91e63;
+    --primary-shadow: 233, 30, 99;
+    --primary-hover: #ff8f8f;
+}
+.__qblue {
+    --primary: #2083bc;
+    --primary-2: #0f4f87;
+    --primary-shadow: 30, 71, 233;
+    --primary-hover: #b1b9ff;
+}
+.__qdefault {
+    --primary: #000209;
+    --primary-2: #08141e;
+    --primary-shadow: 3, 6, 20;
+    --primary-hover: #6b6b6b;
+    --color-contrast: rgb(230, 230, 230);
+}

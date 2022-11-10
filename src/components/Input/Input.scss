@@ -1,0 +1,80 @@
+.__qinput {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-radius: var(--border-radius-ele);
+    outline: none;
+    color: var(--font-color);
+    &::placeholder {
+        color: var(--font-color);
+        opacity: 0.5;
+    }
+
+    &_icon {
+        position: absolute;
+        width: 2rem;
+        height: 100%;
+        @include center-flex(row);
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_input {
+        padding: var(--padding-ele);
+        border: 0px;
+        background-color: transparent;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    &_has_icon {
+        padding-left: 2rem;
+    }
+}
+.__qinput[box-shadow="1"] {
+    &:focus-within {
+        .__qinput_icon {
+            color: var(--primary);
+        }
+        border-color: var(--primary);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+            1px 1px 8px rgba(var(--primary-shadow), 0.6);
+    }
+}
+.__qinput[bordercolor="1"] {
+    border: 1.25px solid var(--primary);
+    .__qinput_icon {
+        color: var(--primary);
+    }
+}
+.__qinput[bordercolor="0"] {
+    border: 1.25px solid var(--font-color);
+}
+.__qinput[bordercolor="2"] {
+    border-bottom: 2px solid var(--border);
+    border-radius: 0;
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 100;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+    }
+    &:focus-within {
+        &::after {
+            width: 100%;
+            transition: width 0.25s ease-out 0s;
+        }
+        box-shadow: none;
+        border-color: var(--border);
+    }
+}
+.__qinput:invalid {
+    border-color: red;
+}

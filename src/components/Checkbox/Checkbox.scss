@@ -1,0 +1,95 @@
+.__qcheckbox {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 0;
+    &_title {
+        @include typingCursor(var(--font-color));
+    }
+    &_input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .__qcheckbox_checkmark {
+            // background-color: var(--primary);
+            // border-color: var(--primary);
+            &::after {
+                display: block;
+            }
+        }
+    }
+    &_input:checked ~ .__qcheckbox_title {
+        color: var(--primary) !important;
+    }
+    &_checkmark {
+        display: block;
+        position: absolute;
+        height: 1rem;
+        width: 1rem;
+        background-color: transparent;
+        border: 0.1rem solid var(--border);
+        &::after {
+            position: absolute;
+            display: none;
+        }
+    }
+    &:hover span {
+        color: var(--primary) !important;
+    }
+    &:hover input ~ .__qcheckbox_checkmark {
+        border-color: var(--primary);
+    }
+}
+.__qcheckbox[style-cus="circle"] {
+    .__qcheckbox_checkmark {
+        border-radius: 50%;
+        &::after {
+            content: "";
+            top: 0.17rem;
+            left: 0.17rem;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: white;
+        }
+    }
+}
+.__qcheckbox[style-cus="square"] {
+    &_checkmark {
+        border-radius: 5px;
+        transform: translateY(-50%);
+        &::after {
+            content: "";
+            top: 50%;
+            height: 16px;
+            width: 16px;
+            left: -1.5px;
+            z-index: 1;
+            transform: translateY(-50%);
+            border-radius: 5px;
+            // background-image: url(../../assets/img/checkbox.svg);
+        }
+    }
+}
+.__qcheckbox[box-position="left"] {
+    padding-left: 1.3rem;
+    &_checkmark {
+        top: 50%;
+        left: 0;
+    }
+}
+.__qcheckbox[box-position="right"] {
+    padding-right: 1.3rem;
+    &_checkmark {
+        top: 50%;
+        right: -0.1rem;
+    }
+}

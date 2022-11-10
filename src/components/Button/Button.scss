@@ -1,0 +1,42 @@
+.__qbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-ele);
+    padding: calc(var(--padding-ele) * 2);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        1px 1px 4px rgba(var(--primary-shadow), 0.6);
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    svg {
+        font-size: 1.25rem;
+        padding-right: 0.5rem;
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+            1px 1px 8px rgba(var(--primary-shadow), 0.6);
+        transform: translateY(-1px);
+    }
+}
+
+.__qbutton[mode="1"] {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--white);
+    font-weight: 600;
+    &:hover {
+        background-color: transparent;
+        color: var(--primary);
+    }
+}
+.__qbutton[mode="2"] {
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+}

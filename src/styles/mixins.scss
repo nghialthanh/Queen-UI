@@ -1,0 +1,43 @@
+//-------------- set center ver and hor in element --------------//
+@mixin center-flex($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+@mixin between-flex($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: $direction;
+}
+
+//-------------- hide content when size is bigger outside element width and add three dots at the end of row -----//
+@mixin lineNumber($number) {
+    display: -webkit-box;
+    overflow: hidden; // hide content when size is bigger outside element width
+    text-overflow: ellipsis; //add three dots at the end of the row
+    -webkit-line-clamp: $number; //  line number want to display
+    -webkit-box-orient: vertical;
+}
+@mixin lineNumber2() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include lineNumber(1);
+}
+//-------------- set width of 1 item above 1 row ---------------//
+@mixin widthResponsive($quantity, $padding) {
+    width: calc(100% / $quantity - $padding);
+}
+//-------------- turn off typing cursor -----------------------//
+@mixin typingCursor($color) {
+    color: $color;
+    caret-color: transparent;
+}
+//-------------- shadow basic ---------------------------------//
+@mixin boxShadow($shadow) {
+    box-shadow: 0px 1px 2px $shadow;
+}
+@mixin boxShadow-2($shadow) {
+    box-shadow: 0px 4px 4px $shadow;
+}
