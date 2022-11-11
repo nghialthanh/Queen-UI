@@ -76,11 +76,11 @@ function App() {
                 >
                     <QButton>
                         <RiUserHeartLine />
-                        Nghĩa
+                        Submit
                     </QButton>
                     <QButton mode="2" color="orange">
                         <RiUserHeartLine />
-                        Nghĩa
+                        Button
                     </QButton>
                 </div>
 
@@ -143,7 +143,7 @@ function App() {
                     mode={"multiple"}
                 />
 
-                <div style={{ height: "20px" }}></div>
+                <div style={{ height: "1020px" }}></div>
             </header>
         </div>
     );

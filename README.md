@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/nghialthanh/Queen-UI">
-    <img width="200" src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/315089725_1331146374328002_4226882032193271592_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=f3aj9ZJZF_8AX_lwjSk&_nc_ht=scontent.fdad2-1.fna&oh=00_AfAtZ42VX3mzo8Kp8oJ_Nv3aphVm6US6Cm-U0DrQYuBHQA&oe=6372E037"
+    <img width="200" src="https://github.com/nghialthanh/Queen-UI/blob/main/logo/t3.png?raw=true"
   </a>
 </p>
 
@@ -10,7 +10,7 @@ A simple React UI library designed by an amateur developer, so there are still m
 
 </div>
 
-[![](https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/314438169_1331146364328003_5697509909645412933_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=02xct9trFvwAX_6sy9L&_nc_ht=scontent.fdad2-1.fna&oh=00_AfA_fFjlQiwJAyTU7obyaA_HBUBAYvt00yHC8uqONjzVyA&oe=63720C9A)]
+![](https://github.com/nghialthanh/Queen-UI/blob/main/logo/Capture.PNG?raw=true)
 
 ## ✨ Features
 
@@ -30,56 +30,74 @@ yarn add queen-night
 
 ## 🔨 Usage
 
+##QInput
+QInput contains all the basic props of an input element
+
 ```jsx
-import { QInput } from "queen-night";
-
-const App = () => (
-    <>
         <QInput
-            value={_value}
-            onChange={(e) => _setValue(e.target.value)}
-            color="purple"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
             placeholder="Search...."
-            icon={<RiUserHeartLine />}
-            bordercolor={"2"}
         />
-
-        <QButton>
-            <RiUserHeartLine />
-            Nghĩa
-        </QButton>
-        <QButton mode="2" color="orange">
-            <RiUserHeartLine />
-            Nghĩa
-        </QButton>
-
-        <QLoading width="80" height="80" color="green" length="4" />
-        <QRadio
-            color="green"
-            value={_value}
-            checked={!_value1}
-            name={"radio1"}
-            onChange={() => {
-                _setValue1((old) => !old);
-                console.log(_value1);
-            }}
-            mode={"circle"}
-        >
-            Female
-        </QRadio>
-
-        <QSelect
-            data={optionQSelect(dataCityVN, "code", "name")}
-            placeholder="Chọn bộ lọc đã lưu ..."
-            value={placeCity}
-            onChange={setPlaceCity}
-            // bordercolor={"1"}
-            color="orange"
-            mode={"multiple"}
-        />
-    </>
 );
 ```
+
+####Props
+
+| Name            | Type    | Description                                                                                                                                                                                                        |
+| --------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **color**       | string  | Set themes for element. Default value is **"black"** and in addition 5 other colors: **"red", "orange", "purple", "green", "blue"**                                                                                |
+| **icon**        | node    | Add icon in front of input element                                                                                                                                                                                 |
+| **className**   | string  | Add class name for element                                                                                                                                                                                         |
+| **style**       | object  | Add inline style for element                                                                                                                                                                                       |
+| **boxShadow**   | boolean | Default value is true, when focus event is fired the input will have an additional box-shadow property according to themes                                                                                         |
+| **bordercolor** | string  | There are 3 types of modes: **"0"**: color and border color is gray when not focused,**"1"**: color and border color is primary color when not focused, **"2"**: Only borderbottom has color. Default value is "0" |
+| **ref**         | ref     | Add ref attached to React elements via the ref attribute.                                                                                                                                                          |
+
+##QButton
+QButton contains all the basic props of an button element
+
+```jsx
+<QButton mode="2" color="orange">
+    Submit
+</QButton>
+```
+
+####Props
+
+| Name          | Type           | Description                                                                                                                         |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **color**     | string         | Set themes for element. Default value is **"black"** and in addition 5 other colors: **"red", "orange", "purple", "green", "blue"** |
+| **className** | string         | Add class name for element                                                                                                          |
+| **children**  | string or node | Add content for button element                                                                                                      |
+| **style**     | object         | Add inline style for element                                                                                                        |
+| **mode**      | string         | There are 3 types of modes: **"1"**: background-color is primary color, **"2"**: background-color is white. Default value is "1"    |
+| **ref**       | ref            | Add ref attached to React elements via the ref attribute.                                                                           |
+
+##QRadio
+
+```jsx
+<QRadio
+    value={value}
+    checked={value}
+    name={"radio"}
+    color="purple"
+    onChange={setValue((old) => !old)}
+>
+    Male
+</QRadio>
+```
+
+####Props
+
+| Name          | Type           | Description                                                                                                                         |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **color**     | string         | Set themes for element. Default value is **"black"** and in addition 5 other colors: **"red", "orange", "purple", "green", "blue"** |
+| **className** | string         | Add class name for element                                                                                                          |
+| **children**  | string or node | Add content for button element                                                                                                      |
+| **style**     | object         | Add inline style for element                                                                                                        |
+| **mode**      | string         | There are 3 types of modes: **"1"**: background-color is primary color, **"2"**: background-color is white. Default value is "1"    |
+| **ref**       | ref            | Add ref attached to React elements via the ref attribute.                                                                           |
 
 ## 🤝 Contributing
 
