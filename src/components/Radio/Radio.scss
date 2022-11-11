@@ -45,7 +45,7 @@
             width: 1rem;
         }
     }
-    &_checkmark[circle="circle"] {
+    &_checkmark[mode="circle"] {
         &::after {
             content: "\26AC";
             position: absolute;

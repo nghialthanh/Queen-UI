@@ -41,7 +41,7 @@ function QRadio(props, ref) {
             />
             <div
                 className="__qradio_checkmark"
-                circle={props.mode || "false"}
+                mode={props.mode || "none"}
             ></div>
         </label>
     );

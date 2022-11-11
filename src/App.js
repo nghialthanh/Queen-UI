@@ -93,7 +93,7 @@ function App() {
                         justifyContent: "space-between",
                     }}
                 >
-                    <QLoading width="80" height="80" color="green" length="4" />
+                    <QLoading width="80" height="80" color="green" />
                     <QRadio
                         value={_value1}
                         checked={_value1}
@@ -138,7 +138,7 @@ function App() {
                     placeholder="Chọn bộ lọc đã lưu ..."
                     value={placeCity}
                     onChange={setPlaceCity}
-                    // bordercolor={"1"}
+                    bordercolor={"1"}
                     color="orange"
                     mode={"multiple"}
                 />
