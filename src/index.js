@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.scss";
-export * from "./components";
-export * from "./helpers";
-export * from "./hook";
+import "./lib/styles/index.scss";
+export * from "./lib/components";
+export * from "./lib/helpers";
+export * from "./lib/hook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <div>Hello world</div>
+    <div></div>
 );

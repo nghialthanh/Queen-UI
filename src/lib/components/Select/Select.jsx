@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import useOutside from "hook/useOutside";
-import { classNameString, removeAccents } from "helpers/basicFunc";
-import { ICON_ARROW_DOWN_SMALL, ICON_CHECK, ICON_CLOSE } from "constants/icon";
+import useOutside from "../../hook/useOutside";
+import { classNameString, removeAccents } from "../../helpers/basicFunc";
+import { ICON_ARROW_DOWN_SMALL, ICON_CHECK, ICON_CLOSE } from "../../constants/icon";
 import QInput from "../Input/Input";
 import classNames from "classnames";
 

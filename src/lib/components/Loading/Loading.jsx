@@ -1,4 +1,4 @@
-import { classNameString } from "helpers/basicFunc";
+import { classNameString } from "../../helpers/basicFunc";
 import { forwardRef } from "react";
 
 const divStyle = (width, height) => {

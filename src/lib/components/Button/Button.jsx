@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { classNameString, propsConfig } from "helpers/basicFunc";
+import { classNameString, propsConfig } from "../../helpers/basicFunc";
 
 const propsKeysContainer = ["className", "color", "children"];
 

@@ -1,4 +1,4 @@
-import { classNameString } from "helpers/basicFunc";
+import { classNameString } from "../../helpers/basicFunc";
 import React, { forwardRef } from "react";
 
 function QCheckBox(props, ref) {
