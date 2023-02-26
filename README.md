@@ -23,11 +23,11 @@ A simple React UI library designed by an amateur developer, so there are still m
 ## 📦 Install
 
 ```bash
-npm i queen-UI
+npm i queen-ui
 ```
 
 ```bash
-yarn add queen-UI
+yarn add queen-ui
 ```
 
 ## 🔗 Links
