@@ -6,9 +6,9 @@
 
 <h1 align="center">🌼QUEEN UI🌼</h1>
 <div align="center">
-A simple React UI library designed by an amateur developer, so there are still many shortcomings. And i hope everyone will support and contribute to my first product
+A simple React UI library
 
-**Currently the document of the library still has a lot of shortcomings and confusion, hope everyone will ignore it**
+**Currently the library and its document still have a lot of shortcomings. Contributions are certainly welcomed**
 
 </div>
 
