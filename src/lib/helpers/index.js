@@ -4,5 +4,5 @@ export {
     optionQSelect,
     removeAccents,
     isObject,
-    QCondition,
+    QCondition
 } from "./basicFunc";
